@@ -19,4 +19,15 @@ $(function () {
     window.location.href = url;
   });
 
+
+  $('#search_text').keypress(function (e) {
+    if (e.which == 13) {
+      var terms  = $('#search_text').val();
+      terms  = terms.replace(/-/, '_');
+      terms  = terms.replace(/\s/, '-');
+      window.location.href= '/photos/search/'+terms;
+      return false;
+    }
+  });
+
 });

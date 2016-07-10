@@ -5,7 +5,10 @@ class PhotosController < ApplicationController
   end
 
   def search
-    @photos = FiveHundredAPI.search(params[:terms], params[:page])
+    terms = params[:terms]
+    terms = terms.gsub('-', ' ')
+    terms = terms.gsub('_', '-')
+    @photos = FiveHundredAPI.search(terms, params[:page])
   end
 
   def redirect
