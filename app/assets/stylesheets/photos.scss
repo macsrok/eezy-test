@@ -21,35 +21,79 @@ $break-large: 1200px;
 
     .hero-logo-home{
       margin-top: 5%;
-      width:9.5%;
       margin-left: auto;
       margin-right: auto;
+
+      @media screen and (min-width: 0px) and (max-width: $break-small - 1) {
+        width:30%;
+      }
+      @media screen and (min-width: $break-small) and (max-width: $break-medium - 1) {
+        width: 15%
+      }
+      @media screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+        width: 9.5%;
+      }
+      @media screen and (min-width: $break-large) {
+        width: 9.5%;
+      }
+
     }
 
     .hero-header-text{
       margin-top: 3%;
       width:100%;
       text-align: center;
-      font-size: 19px;
-      color:white
+      color:white;
+
+      @media screen and (min-width: 0px) and (max-width: $break-small - 1) {
+        font-size: 16px;
+        padding-right: 3%;
+        padding-left: 3%
+
+      }
+      @media screen and (min-width: $break-small) and (max-width: $break-medium - 1) {
+        font-size: 19px;
+        padding-right: 0;
+        padding-left: 0;
+      }
+      @media screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+        font-size: 19px;
+        padding-right: 0;
+        padding-left: 0;
+      }
+      @media screen and (min-width: $break-large) {
+        width: 50.5%;
+      }
     }
+
     #search_text{
-      width: 50.5%;
       height: 40px;
       font-size: 14px;
       margin-top: 1%;
       margin-bottom: 10%;
       border: 1px solid white;
       border-radius: 5px;
-
       background: asset_url('Icon.png') no-repeat;
       background-position-x: 99%;
       background-position-y: 50%;
       padding-left: 1%;
       padding-right: 1%;
       background-color:white;
-    }
 
+      @media screen and (min-width: 0px) and (max-width: $break-small - 1) {
+        width: 85%;
+      }
+      @media screen and (min-width: $break-small) and (max-width: $break-medium - 1) {
+        width: 70.5%;
+      }
+      @media screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+        width: 9.5%
+      }
+      @media screen and (min-width: $break-large) {
+        width: 9.5%
+      }
+
+    }
   }
 
   //#MARK GRID Queries
