@@ -6,7 +6,7 @@
 <div class="row grid">
   <div class="grid-sizer"></div>
   <% @photos['photos'].each do |p| %>
-      <%= image_tag p['image_url'], class: 'grid-item', 'data-500-id': p['id']%>
+      <%= image_tag p['image_url'], class: 'grid-item', 'data-500-id': p['id'], 'data-search-terms': 'home-page'%>
   <% end %>
 </div>
 

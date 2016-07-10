@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
+namespace :photos do
+    get 'index', action:'index'
+    get 'search/:terms(/:page)', action:'search', as: 'search'
+    get 'redirect/:external_id/:terms', action:'redirect', as: 'redirect'
+end
 
-    get '/photos/index', to: 'photos#index'
-    get '/photos/search/:terms(/:page)', to: 'photos#search', as: 'photos_search'
-    get '/photos/redirect/:id', to: 'photos#redirect', as: 'photos_redirect'
 
 
 
