@@ -1,0 +1,19 @@
+//THIS FILE NOS NOT USED.
+// IT IS AN EXAMPLE OF HOW IMAGES WOULD BE
+// APPENDED TO THE PAGE VERSUS A PAG RELOAD
+
+
+var items = [];
+<% @photos['photos'].each do |p| %>
+  items.push('<%= escape_javascript image_tag p['image_url'], class: 'grid-item' %>');
+<% end %>
+
+$grid.append(items);
+$grid.masonry('reloadItems');
+
+$grid.imagesLoaded().progress(function () {
+  $grid.masonry('layout');
+});
+
+$('.load-more-row').html('<%= escape_javascript(link_to('Load More', photos_search_path(params[:terms], (@photos['current_page'] + 1)), remote:true )) %>');
+

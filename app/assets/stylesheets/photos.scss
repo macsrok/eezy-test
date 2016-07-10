@@ -1,0 +1,123 @@
+// Place all the styles related to the photos controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$break-small: 768px;
+$break-medium: 992px;
+$break-large: 1200px;
+
+
+.container-fluid{
+  font-family: "proxima-nova",sans-serif;
+  .header-row{
+    min-height: 200px;
+    background: asset-url('Background.png') no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+
+    .hero-logo-home{
+      margin-top: 5%;
+      width:9.5%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-header-text{
+      margin-top: 3%;
+      width:100%;
+      text-align: center;
+      font-size: 19px;
+      color:white
+    }
+    #search_text{
+      width: 50.5%;
+      height: 40px;
+      font-size: 14px;
+      margin-top: 1%;
+      margin-bottom: 10%;
+      border: 1px solid white;
+      border-radius: 5px;
+
+      background: asset_url('Icon.png') no-repeat;
+      background-position-x: 99%;
+      background-position-y: 50%;
+      padding-left: 1%;
+      padding-right: 1%;
+      background-color:white;
+    }
+
+  }
+
+  //#MARK GRID Queries
+
+  .grid{
+    padding-bottom: 55px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10px;
+    .grid-item {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (min-width: 0px) {
+    .grid-item {
+      width: 100%;
+      padding: 3px;
+    }
+
+    .grid-sizer {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: $break-small) {
+    .grid-item {
+      width: 50%;
+      padding: 3px;
+    }
+
+    .grid-sizer {
+      width: 50%;
+    }
+  }
+
+  @media screen and (min-width: $break-medium) {
+    .grid-item {
+      width: 25%;
+      padding: 3px;
+    }
+
+    .grid-sizer {
+      width: 25%;
+    }
+  }
+
+  @media screen and (min-width: $break-large) {
+    .grid-item {
+      width: 16.6667%;
+      padding: 3px;
+    }
+
+    .grid-sizer {
+      width: 16.6667%;
+    }
+  }
+
+}
+
+@font-face {
+  font-family: 'vag_roundedregular';
+  src: asset-url('vag_rounded_black-webfont.woff2') format('woff2'),
+  asset-url('vag_rounded_black-webfont.woff') format('woff'),
+  asset-url('VAG_Rounded_Black.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}

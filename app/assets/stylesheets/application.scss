@@ -1,0 +1,17 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "photos";
+$footer-border:#e0e1e2;
+$footer-gray: #a4a6a7;
+
+.footer-row{
+  font-family: Arial, Sans-Serif;
+  font-size: 11px;
+  color: $footer-gray;
+  .footer-content{
+    text-align: center;
+    padding-top: 67px;
+    padding-bottom: 67px;
+    border-top: 1px solid $footer-border;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="row header-row">
+  <%= image_tag 'Logotype.png', class: 'hero-logo-home' %>
+  <p class="hero-header-text">Enter your keywords below to see results from the 500px API</p>
+  <%= text_field_tag 'search_text', '', placeholder: 'Enter Keyword(s)' %>
+</div>
+<div class="row grid">
+  <div class="grid-sizer"></div>
+  <% @photos['photos'].each do |p| %>
+      <%= image_tag p['image_url'], class: 'grid-item', 'data-500-id': p['id']%>
+  <% end %>
+</div>
+
+<%= content_for :javascript do %>
+  <%= javascript_include_tag 'photos' %>
+<% end %>

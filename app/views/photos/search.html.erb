@@ -1,0 +1,13 @@
+<div class="row grid">
+  <div class="grid-sizer"></div>
+  <% @photos['photos'].each do |p| %>
+      <%= image_tag p['image_url'], class: 'grid-item', 'data-500-id': p['id'] %>
+  <% end %>
+</div>
+<div class="row load-more-row">
+  <%= link_to('Load More', photos_search_path(params[:terms], (@photos["current_page"] + 1)), remote:true)%>
+</div>
+
+<%= content_for :javascript do %>
+    <%= javascript_include_tag 'photos' %>
+<% end %>
