@@ -30,10 +30,7 @@ $break-large: 1200px;
       @media screen and (min-width: $break-small) and (max-width: $break-medium - 1) {
         width: 15%
       }
-      @media screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
-        width: 9.5%;
-      }
-      @media screen and (min-width: $break-large) {
+      @media screen and (min-width: $break-medium)  {
         width: 9.5%;
       }
 
@@ -51,19 +48,19 @@ $break-large: 1200px;
         padding-left: 3%
 
       }
-      @media screen and (min-width: $break-small) and (max-width: $break-medium - 1) {
+      @media screen and (min-width: $break-small) {
         font-size: 19px;
         padding-right: 0;
         padding-left: 0;
       }
-      @media screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
-        font-size: 19px;
-        padding-right: 0;
-        padding-left: 0;
-      }
+
       @media screen and (min-width: $break-large) {
-        width: 50.5%;
+        font-size: 24px;
       }
+      @media screen and (min-width: 1500px) {
+        font-size: 32px;
+      }
+
     }
 
     #search_text{
@@ -85,12 +82,18 @@ $break-large: 1200px;
       }
       @media screen and (min-width: $break-small) and (max-width: $break-medium - 1) {
         width: 70.5%;
+        font-size: 18px;
+        height:50px;
       }
       @media screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
-        width: 9.5%
+        width: 55.4%;
+        font-size: 22px;
+        height:61px;
       }
       @media screen and (min-width: $break-large) {
-        width: 9.5%
+        width: 55.4%;
+        font-size: 28px;
+        height:72px;
       }
 
     }
