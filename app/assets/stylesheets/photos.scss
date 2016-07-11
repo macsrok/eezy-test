@@ -28,10 +28,10 @@ $load-more-btn-color:#FFFFFF;
       margin-right: auto;
 
       @media screen and (min-width: 0px) and (max-width: $break-small - 1) {
-        width:30%;
+        height: 75px
       }
       @media screen and (min-width: $break-small) and (max-width: $break-medium - 1) {
-        width: 15%
+        height: 100px
       }
       @media screen and (min-width: $break-medium)  {
         height: 125px
@@ -84,15 +84,17 @@ $load-more-btn-color:#FFFFFF;
 
       @media screen and (min-width: 0px) and (max-width: $break-small - 1) {
         width: 85%;
+        margin-bottom: 100px;
       }
       @media screen and (min-width: $break-small) and (max-width: $break-medium - 1) {
-        width: 70.5%;
+        width: 80%;
         font-size: 18px;
         height:50px;
+        margin-bottom: 180px;
       }
       @media screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
-        width: 55.4%;
-        font-size: 22px;
+        width: 70%;
+        font-size:18px;
         height:61px;
       }
       @media screen and (min-width: $break-large) {
@@ -206,7 +208,30 @@ $load-more-btn-color:#FFFFFF;
       background-size: 17px 17px;
       background-color:white;
 
+      @media screen and (min-width: 0px) and (max-width: $break-small - 1) {
+        width: 190px;
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
+          width: 210px;
+        }
+        @media (-webkit-min-device-pixel-ratio: 3){
+          width: 220px;
+        }
+      }
+
     }
+
+    @media screen and (min-width: 0px) and (max-width: $break-small - 1) {
+      img{
+        max-width: 75px;
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
+          max-width: 100px;
+        }
+        @media (-webkit-min-device-pixel-ratio: 3){
+          max-width: 125px;
+        }
+      }
+    }
+
   }
 
   .search-response-row{
