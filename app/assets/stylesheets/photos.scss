@@ -44,6 +44,7 @@ $load-more-btn-color:#FFFFFF;
       width:100%;
       text-align: center;
       color:white;
+      font-weight: 600;
 
       @media screen and (min-width: 0px) and (max-width: $break-small - 1) {
         font-size: 16px;
@@ -70,7 +71,7 @@ $load-more-btn-color:#FFFFFF;
       height: 40px;
       font-size: 13px;
       margin-top: 1%;
-      margin-bottom: 10%;
+      margin-bottom: 230px;
       border: 1px solid white;
       border-radius: 5px;
       background: asset_url('Icon.png') no-repeat;
@@ -95,7 +96,7 @@ $load-more-btn-color:#FFFFFF;
         height:61px;
       }
       @media screen and (min-width: $break-large) {
-        width: 55.4%;
+        width: 967px;
         font-size:13px;
         height:72px;
       }
