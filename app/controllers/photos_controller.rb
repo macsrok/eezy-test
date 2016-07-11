@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+  include PhotosHelper
 
   def index
     #fetch the most popular photos on 500px to display on the home page.
@@ -6,10 +7,8 @@ class PhotosController < ApplicationController
   end
 
   def search
-    #sanatize the search terms
-    terms = params[:terms]
-    terms = terms.gsub('-', ' ')
-    terms = terms.gsub('_', '-')
+    #desterilize the search terms
+    terms = desterilize_search_terms params[:terms]
 
     #fetch the photos
     @photos = FiveHundredAPI.search(terms, params[:page])

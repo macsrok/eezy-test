@@ -1,11 +1,25 @@
-<div class="row grid">
+<div class="row search-header-row">
+  <%= link_to photos_index_path do %>
+    <%= image_tag 'Logotype-search.png' %>
+  <% end %>
+  <%= text_field_tag 'search_results_input', desterilize_search_terms( params[:terms] ) %>
+</div>
+<div class="row search-response-row">
+  Displaying &ldquo;<strong><%= desterilize_search_terms params[:terms] %></strong>&rdquo; Stock Photos and Images (<%= @photos['total_items']  %>)
+</div>
+
+<div class="row grid top-margin">
   <div class="grid-sizer"></div>
   <% @photos['photos'].each do |p| %>
       <%= image_tag p['image_url'], class: 'grid-item', 'data-500-id': p['id'], 'data-search-terms': params[:terms] %>
   <% end %>
 </div>
 <div class="row load-more-row">
-  <%= link_to('Load More', photos_search_path(params[:terms], (@photos["current_page"] + 1)))%>
+  <% if @photos['current_page'] < @photos['total_pages'] %>
+      <%= link_to photos_search_path(params[:terms], (@photos["current_page"] + 1)) do %>
+        <button class="load-more-btn">Load More Results</button>
+      <% end %>
+  <% end %>
 </div>
 
 <%= content_for :javascript do %>

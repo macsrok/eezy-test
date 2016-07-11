@@ -7,6 +7,9 @@ $break-small: 768px;
 $break-medium: 992px;
 $break-large: 1200px;
 
+$load-more-btn-bg-color:#B8354F;
+$load-more-btn-color:#FFFFFF;
+
 
 .container-fluid{
   font-family: "proxima-nova",sans-serif;
@@ -20,7 +23,7 @@ $break-large: 1200px;
     text-align: center;
 
     .hero-logo-home{
-      margin-top: 5%;
+      margin-top: 80px;
       margin-left: auto;
       margin-right: auto;
 
@@ -31,13 +34,13 @@ $break-large: 1200px;
         width: 15%
       }
       @media screen and (min-width: $break-medium)  {
-        width: 9.5%;
+        height: 125px
       }
 
     }
 
     .hero-header-text{
-      margin-top: 3%;
+      margin-top: 4.1%;
       width:100%;
       text-align: center;
       color:white;
@@ -58,20 +61,21 @@ $break-large: 1200px;
         font-size: 24px;
       }
       @media screen and (min-width: 1500px) {
-        font-size: 32px;
+        font-size: 28px;
       }
 
     }
 
     #search_text{
       height: 40px;
-      font-size: 14px;
+      font-size: 13px;
       margin-top: 1%;
       margin-bottom: 10%;
       border: 1px solid white;
       border-radius: 5px;
       background: asset_url('Icon.png') no-repeat;
-      background-position-x: 99%;
+      background-position-x: 97.7%;
+      background-size: 24px 24px;
       background-position-y: 50%;
       padding-left: 1%;
       padding-right: 1%;
@@ -92,7 +96,7 @@ $break-large: 1200px;
       }
       @media screen and (min-width: $break-large) {
         width: 55.4%;
-        font-size: 28px;
+        font-size:13px;
         height:72px;
       }
 
@@ -106,6 +110,9 @@ $break-large: 1200px;
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 10px;
+    &.top-margin{
+      margin-top: 26px;
+    }
     .grid-item {
       &:hover {
         cursor: pointer;
@@ -154,6 +161,60 @@ $break-large: 1200px;
 
     .grid-sizer {
       width: 16.6667%;
+    }
+  }
+
+  .load-more-row{
+    text-align: center;
+    padding-bottom: 65px;
+    a {
+      button {
+        &.load-more-btn {
+          height: 70px !important;
+          width: 300px !important;
+          border: 1px solid $load-more-btn-bg-color;
+          border-radius: 5px;
+          background-color: $load-more-btn-bg-color;
+          color: $load-more-btn-color;
+          margin-right: auto;
+          margin-left: auto;
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .search-header-row{
+    background-image: asset-url('header-bar.png') ;
+    background-repeat: repeat-y;
+    height: 60px !important;
+    padding-left: 3.8%;
+
+    #search_results_input{
+      width: 300px;
+      height: 38px;
+      border-radius: 5px;
+      border: 1px solid white;
+      margin-top: 11px;
+      margin-left:22px ;
+      padding-left:1%;
+      background: asset_url('Icon.png') no-repeat;
+      background-position-x: 98%;
+      background-position-y: 50%;
+      background-size: 17px 17px;
+      background-color:white;
+
+    }
+  }
+
+  .search-response-row{
+    padding-left: 3.5%;
+    font-size: 13px;
+    margin-top: 31px;
+    strong{
+      font-family: "proxima-nova";
+      font-weight: 600;
     }
   }
 
